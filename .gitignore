@@ -8,10 +8,9 @@ funcs/
 preprocessing.py
 /Sample_Submission_new (1).csv
 models/
-baseline.ipynb
-baseline.py
 data_address.py
 temp.ipynb
+test.py
 
 data/
 image/corr_heatmap.png
