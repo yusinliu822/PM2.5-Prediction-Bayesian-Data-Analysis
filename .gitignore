@@ -1,19 +1,8 @@
-/epa_od_data
-test.ipynb
-personal_readme.md
-jskracht_multitime.py
-.lh/
-/sp23_proj.pdf
-funcs/
-preprocessing.py
-/Sample_Submission_new (1).csv
-models/
-data_address.py
-temp.ipynb
-test.py
-
-data/
-image/corr_heatmap.png
-.gitignore
-
 __pycache__/
+.lh/
+data/*
+!data/label_dict.json
+/epa_od_data
+images/model
+wandb
+
