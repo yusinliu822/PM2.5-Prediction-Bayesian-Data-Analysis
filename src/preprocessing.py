@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from funcs.functions import load_data, site_information, format_publishTime, plt_coff_corr
-from config import DIRECTORY, IMAGE_DIRECTORY, SITEID
+from src.config import DIRECTORY, IMAGE_DIRECTORY, SITEID
 import matplotlib.pyplot as plt
 import seaborn as sns
 import json
@@ -94,15 +94,18 @@ def deal_with_site():
     df_pm25_part = df_pm25_part.fillna(method='ffill')
 
     # drop useless columns
-    df_pm25_part.drop(columns=['WindSpeed', 'WindDirec', 'Pollutant'], inplace=True)
+    columns_to_drop = [col for col in df_pm25_part.columns if 'Pollutant' in col]
+    df_pm25_part.drop(columns=columns_to_drop, inplace=True)
+    df_pm25_part.drop(columns=['WindSpeed', 'WindDirec'], inplace=True)
+    # df_pm25_part.drop(columns=['WindSpeed', 'WindDirec', 'Pollutant'], inplace=True) ## original
     df_pm25_part.to_json(f'{DIRECTORY}pm25_changed{SITEID}.json', indent=4)
 
     # Plot coefficient relationship heatmap
-    fig, ax = plt.subplots(figsize=(20, 8))
-    sns.heatmap(df_pm25_part.corr(), annot=True, ax=ax, cmap='coolwarm')
+    # fig, ax = plt.subplots(figsize=(20, 8))
+    # sns.heatmap(df_pm25_part.corr(), annot=True, ax=ax, cmap='coolwarm')
     # plt.savefig(f'images/heatmap_region{SITEID}_{current_time}.png')
-    plt.close()
-    print("Finish preprocessing for site", SITEID, "!")
+    # plt.close()
+    print(f"Finish preprocessing for site{SITEID}!")
     return df_pm25_part
 
 if __name__ == '__main__':

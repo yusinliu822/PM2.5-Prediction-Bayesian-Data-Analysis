@@ -1,4 +1,4 @@
-from preprocessing import deal_with_site
+from src.preprocessing import deal_with_site
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,7 +9,7 @@ import pymc3 as pm
 from tqdm import tqdm
 import arviz as az
 from sklearn.metrics import mean_squared_error
-from config import *
+from src.config import *
 import datetime
 import wandb
 

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import re
 from tqdm import tqdm
-from config import DIRECTORY
+from src.config import DIRECTORY
 
 DESTINATION = DIRECTORY + 'site_information.csv'
 

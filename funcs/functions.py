@@ -6,7 +6,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from funcs.site_func import extract_site_name, format_site_information, map_siteId
 import datetime
-from config import DIRECTORY, IMAGE_DIRECTORY
+from src.config import DIRECTORY
 
 def load_data():
 
@@ -19,6 +19,7 @@ def load_data():
         return pd.read_csv(DESTINATION)
     
     df_pm25 = pd.DataFrame()
+    cols = []
     for yr in DATAYEARS:
         for month in range(1, 13):
             month = str(month).zfill(2)
