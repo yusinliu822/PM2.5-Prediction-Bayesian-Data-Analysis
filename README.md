@@ -10,5 +10,5 @@
     ```
 
 ## Report and Result
-[Bayesian Final Project Report.pdf](https://github.com/user-attachments/files/15506406/Bayesian.Final.Project.Report.pdf)
-[bayes.zip](https://github.com/user-attachments/files/15506427/bayes.zip)
+- [Bayesian Final Project Report.pdf](https://github.com/user-attachments/files/15506406/Bayesian.Final.Project.Report.pdf)
+- [bayes.zip](https://github.com/user-attachments/files/15506427/bayes.zip)
